@@ -1,0 +1,69 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+ 
+
+
+public class methodClass extends JFrame{
+	
+	private JLabel item1;
+
+	private JTextField item2;
+	
+	
+	
+	
+	public methodClass(){
+		
+		super("Text Display");
+		
+		setLayout (new FlowLayout());
+		
+		
+		
+		item2 = new JTextField("Enter Any Type of String Here:");
+		
+		add(item2);
+		
+		
+		
+		
+		
+		
+		Textinput handler = new Textinput();
+		
+		item2.addActionListener(handler);
+		
+		
+	}
+	
+	
+	private class Textinput implements ActionListener{
+		
+		public void actionPerformed(ActionEvent	event){
+			
+			String string = "";
+			
+						
+			if(event.getSource()== item2)
+				
+				
+			string= String.format("Number Entered: %s",
+                        event.getActionCommand()).replaceAll("[^0-9.]", "");
+			
+			
+			
+			JOptionPane.showMessageDialog(null, getValue(string));
+
+		}
+		
+	}
+
+public String getValue(String string) {
+        return string;
+    }
+}
+

@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+
+import javax.swing.JFrame;
+
+public class mainClass {
+  public static void main(String[] args) {
+ 
+	  
+	  methodClass kume = new methodClass();
+	  
+	  kume.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	  
+	  kume.setSize(300, 600);
+	  kume.setVisible(true);
+	  
+	  
+}
+  
+ }
+
